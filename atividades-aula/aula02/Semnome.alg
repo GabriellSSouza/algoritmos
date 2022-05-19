@@ -1,13 +1,11 @@
-algoritmo "semnome"
+algoritmo "Primeiro"
+// Função :
+// Autor :
+// Data : 17/05/2022
+// Seção de Declarações 
 var
-  n1,n2: inteiro
-  m: real
-  
+  msg: caractere
 inicio
-   escreva("informe uma numero: ")
-   leia (n1)
-   escreva ("informe outro numero: ")
-   leia (n2)
-   m <- (n1 + n2)/2
-   escreva ("a media entre", n1, " e", n2, " e igual a:",m)
+ msg <- "ola, mundo!"
+ escreval("mensagem ", msg)
 fimalgoritmo
