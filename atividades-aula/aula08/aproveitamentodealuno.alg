@@ -9,34 +9,31 @@ inicio
       escreval ("------------------------")
       escreva (" Primeira Nota: ")
       leia (n1)
-      escreva (" Segunda Nota")
+      escreva (" Segunda Nota: ")
       leia (n2)
       M <- (n1+n2)/2
-      se (m < 5)entao
-         a <- F
+      escreval ("------------------------")
+      escreval (" MEDIA:",m)
+      se (m >= 9)entao
+         escreval (" APRIVEITAMENTO: A")
          senao
-              se (m >=5) e (m <6)entao
-                 a <-E
+              se (m >= 8) e (m < 9)entao
+                 escreval(" APROVEITAMENTO: B")
                  senao
-                      se (m >= 6) e (m <7)entao
-                         a <-D
+                      se (m >= 7) e (m < 8)entao
+                         escreval (" APROVEITAMENTO: C")
                          senao
-                              se (m >+ 7) e (m <8)entao
-                                 a <- C
+                              se (m >= 6) e (m < 7)entao
+                                 escreval (" APROVEITAMENTO: D")
                                  senao
-                                      se (m >=8) e (m <9)entao
-                                         a <- B
+                                      se (m >= 5) e (m < 6)entao
+                                         escreval (" APROVEITAMENTO: E")
                                          senao
-                                         a <- A
-
+                                         escreval (" APROVEITAMENTO: F")
                                       fimse
                               fimse
-                         
                       fimse
               fimse
       fimse
-      escreval ("------------------------")
-      escreval (" MEDIA:",m)
-      escreval (" APROVEITAMENTO:",a)
-      escreval ("------------------------")
+      escreval("------------------------")
 fimalgoritmo
