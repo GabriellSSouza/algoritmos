@@ -4,9 +4,10 @@ var
    R: vetor [1..5] de caractere
    nome: vetor [1..3] de caractere
    RA: vetor [1..5] de caractere
-   TotAL: vetor [1..3] de inteiro
-   NotAL: vetor [1..5] de real
-   tot:real
+   NotAL: vetor [1..3] de real
+   acertos: vetor [1..3] de real
+   mediAl:real
+   totacer: real
    c,i:inteiro
 inicio
       escreval ("")
@@ -25,25 +26,27 @@ inicio
           escreva ("nome: ")
           leia (nome[c])
           escreval("RESPOSTAS DADAS")
+          
           para i <-1 ate 5 faca
-              escreva ("Questão ",i)
+              escreva ("Questão ",i,": ")
               leia(RA[i])
               se (RA[i]=R[i])entao
-                 TotAl[i] <-+1
-                 NotAL[i] <- totAL[i]*2
-                 tot <- totAL[i]*2
+                 acertos[c] <- acertos[c] +1
+                 NoTal[c] <-acertos[c]*2
+                 TotAcer <- totacer +1
               fimse
           fimpara
+          
       fimpara
-      media <- tot/3
+      MediAl <- (totacer*2)/3
       
       limpatela
       escreval ("")
       escreval (" NOTAS FINAIS")
-      escreval ("--------------")
+      escreval ("----------------------------")
       para c<- 1 ate 3 faca
-           escreva (nome[c]:12,NotAL[c]:2:1)
+           escreval (nome[c]:12,NotAL[c]:2:1)
       fimpara
       escreval ("----------------------------")
-      escreval ("Media da Turma: ",media:2:1)
+      escreval ("Media da Turma: ",mediAl:2:1)
 fimalgoritmo
