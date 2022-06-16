@@ -57,7 +57,7 @@ inicio
 fimprocedimento
 procedimento menu ()
 inicio
- limpatela
+        escreval ()
         escreval (" MENU DE OPÇÕES ")
         escreval ("================")
         escreval ("[1] Mostrar a Matriz")
@@ -69,37 +69,51 @@ inicio
         leia (R)
 fimprocedimento
 inicio
+      r<-0
       para l<-1 ate 4 faca
            para c<- 1 ate 4 faca
                 escreva ("Digite o valor para a posição [",l,",",c,"]: ")
-                leia(m[l,c])
+                leia (m[l,c])
            fimpara
       fimpara
       repita
         limpatela
-        escreval (" MENU DE OPÇÕES ")
-        escreval ("================")
-        escreval ("[1] Mostrar a Matriz")
-        escreval ("[2] Diagonal Principal")
-        escreval ("[3] Trinagulo Superior")
-        escreval ("[4] Trinagulo Inferior")
-        escreval ("[5] Sair ")
-        escreval ("==== OPÇÃO: ")
-        leia (R)
-        escolha (R)
-              caso 1
-                   matriz ()
-                   menu ()
-              caso 2
-                   diagonalP ()
-              caso 3
-                   trianguloS ()
-              caso 4
-                   TrinaguloI ()
-              caso 5
-                   escreval ("encerrando...")
-          fimescolha
-        ate (R="5")
+    se (r=0)entao
+       menu ()
+       senao
+        se (R=1)entao
+           escreval ()
+           matriz()
+           menu ()
+
+        senao
+             se (R=2)entao
+                escreval ()
+                DiagonalP ()
+                menu ()
+             senao
+                  se (R=3)entao
+                     escreval ()
+                     trianguloS ()
+                     menu ()
+
+                  senao
+                       se (R=4)entao
+                          escreval ()
+                          trianguloI ()
+                          menu ()
+
+                       senao
+                            se (r=5)entao
+                              escreval ()
+                              escreval ("Encerrando...")
+                          fimse
+                       fimse
+                  fimse
+             fimse
+        fimse
+       fimse
+      ate (R=5)
 
 
 fimalgoritmo
